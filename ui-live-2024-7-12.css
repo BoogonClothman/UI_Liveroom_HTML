@@ -1,0 +1,51 @@
+html, body {
+    margin: 0;
+    background: transparent;
+    overflow: hidden;
+}
+
+.master {
+    width: 1600px;
+    height: 900px;
+    margin: auto;
+}
+
+.top-notice {
+    display: flex;
+    width: 1000px;
+    height: 75px;
+    position: absolute;
+    top: 50px;
+    margin-left: 60px;
+    border-radius: 30px;
+    background-color: #dcb;
+    align-items: center; /* 垂直居中文本 */  
+    justify-content: center; /* 水平居中文本（如果需要）*/
+}
+
+.top-notice--text {
+    font-size: 30px;
+    color: #fff;
+}
+
+.chat {
+    display: flex;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    border-radius: 20px;
+    background-color: #ffe;
+}
+
+.scroll-text {
+    display: flex;
+    width: 1460px;
+    height: 70px;
+    position: absolute;
+    top: 762.5px;
+    margin-left: 60px;
+    background-color: #edc;
+    border-radius: 20px;
+}

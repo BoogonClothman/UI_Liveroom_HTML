@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Bgc.">
+        <link rel="stylesheet" href="ui-live-2024-7-12.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ui-live-2024-7-12</title>
+    </head>
+    <body>
+        <div class="master">
+            <canvas id="bg" width="1600" height="900"></canvas>
+            <div class="top-notice">
+                <span class="top-notice--text"></span>
+            </div>
+            <div class="chat"></div>
+            <div class="scroll-text"></div>
+        </div>
+        <script>
+            var canvas = document.getElementById("bg")
+            if(canvas.getContext) {
+                var ctx = canvas.getContext("2d")
+                ctx.fillStyle = '#fed'
+                ctx.fillRect(0, 0, canvas.width, canvas.height)
+                // 背景色
+                ctx.save()
+                ctx.beginPath()
+                ctx.moveTo(60, 170)  // 左上一，起始点
+                ctx.arcTo(60, 150, 80, 150, 20)  // 左上弧，左上二
+                ctx.lineTo(1040, 150)  // 上，右上二
+                ctx.arcTo(1060, 150, 1060, 170, 20)  // 右上弧，右上一
+                ctx.lineTo(1060, 692.5)  // 右，右下一
+                ctx.arcTo(1060, 715.5, 1040, 715.5, 20)  // 右下弧，右下二
+                ctx.lineTo(80, 712.5)  // 下，左下二
+                ctx.arcTo(60, 712.5, 60, 692.5, 20)  // 左下弧，左下一
+                ctx.lineTo(60, 170)  // 左，为了图像的安全性
+                ctx.closePath()  // 闭合
+                ctx.clip()  // 限制
+                ctx.clearRect(0, 0, canvas.width, canvas.height)
+                ctx.restore()
+            }
+        </script>
+    </body>
+</html>
